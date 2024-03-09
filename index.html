@@ -51,7 +51,7 @@
             </div>
         </section>
         <!-- Sobre mí -->
-        <section class="section" id="sobremi">
+        <section class="section3" id="sobremi">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Mis servicios -->
         <section class="section" id="servicios">
             <div class="container3">
@@ -93,10 +93,10 @@
                     </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
-    
+
         <!-- Contáctame -->
         <section class="contact" id="contactame">
             <div class="container">
@@ -143,16 +143,15 @@
                             <a href="https://www.instagram.com/inabosque/"><i class="red fa-brands fa-instagram"></i></a>
                             <a href="https://www.linkedin.com/in/i%C3%B1aki-bosque-15b510292/"><i class="red fa-brands fa-linkedin-in"></i></a>
                         </div>
-                        
+
                     </div>
                 </div>
-                <div class="right"></div>
             </div>
         </section>
     </div>
-    <footer class="copyright">
+    <!-- <footer class="copyright">
         <p>Copyright © 2024. All rights reserved Iñaki Prod</p>
-    </footer>
+    </footer> -->
     <a href="#" id="volverTop" class="position-fixed bottom-0 end-0 p-3 d-none" style="z-index: 1030;">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM7.646 5.646a.5.5 0 0 0 .708 0L8 5.354l2.646 2.646a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L8 5.707l.646.647z"/>
@@ -181,11 +180,11 @@
         document.addEventListener("DOMContentLoaded", function() {
             const submitButton = document.querySelector('.btn2');
             const counter = document.getElementById('slots-counter');
-    
+
             // Get the initial value from local storage or set it to 10 if not present
             let slotsLeft = localStorage.getItem('slotsLeft') || 10;
             counter.textContent = slotsLeft;
-    
+
             // Add event listener to the submit button
             submitButton.addEventListener('click', function() {
                 // Not needed here anymore
@@ -196,7 +195,7 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwUh7-IWcMDIaO1pVyFqEAMEwInd-Rmsrb1_zfDaWI_EppbIVKoybEMIokboJaKYs7x/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
-    
+
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -210,7 +209,7 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
-    
+
 </body>
 </html>
 
