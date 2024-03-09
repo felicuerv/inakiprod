@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,500;1,900&display=swap');
+
+body{
+    overflow-x: hidden; /* Para prevenir la barra de desplazamiento horizontal */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.section {
+    width: 100;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    margin-right: 25px;
+    font-weight: 600;
+    font-size: 24px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Cambia esto al color que desees para el subrayado */
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 50%;
+}
+
+#inicio {
+    background: linear-gradient(to bottom, 
+                    rgba(0, 0, 0, 0.8), /* Negro */
+                    rgba(0, 0, 0, 0.8), /* Negro */
+                    rgba(255, 0, 0, 0.2), /* Rojo */
+                    rgba(0, 0, 255, 0.2) /* Azul */
+                ),
+                url('../assets/img/fondo.png'); /* Fondo de imagen opcional */
+    background-size: cover;
+    background-position: center;
+    /* Otras propiedades de estilo */
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center ;
+    margin-top: 150px;
+}
+
+.container1 h1{
+    font-size: 70px;
+    font-weight: 800;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f0f0f0;
+}
+
+.container1 h1 span {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    /* Color de fondo degradado */
+    background: linear-gradient(to right, #7073CA, red);
+    /* Aplica el degradado al texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Hace el texto transparente para mostrar el degradado */
+    color: transparent
+}
+
+.container1 p{
+    padding-top: 70px;
+    font-size: 36px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-shadow: #000;
+}
+
+#texto2{
+    margin-top: 50px;
+    font-size: 25px;
+    color: #332f2c;
+}
+
+.boton-inicio{
+    padding-top: 40px;
+}
+
+#volverTop {
+    background-color: black; /* Fondo blanco */
+    color: white; /* Color de la flecha */
+    border-radius: 100%; /* Borde circular */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+#volverTop:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+    color: black; /* Color de la flecha al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+
+
+#sobremi {
+    background: 
+                url('../assets/img/fondo5.png');
+    background-size: cover;
+    background-position: center;
+    /* Otras propiedades de estilo */
+}
+
+.scroller{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+.col h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#sobremi p {
+    text-align: left; /* Alinear el texto a la izquierda */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; 
+    padding-top: 20px;
+    color: #f0f0f0;
+    font-weight: 600;
+    font-size: 18px;
+    max-width: 700px;
+    border: #000;
+}
+
+
+
+.boston{
+    padding-left: 20px;
+}
+
+.botones{
+    padding-top: 50px;
+}
+
+#servicios {
+    background: 
+                url('../assets/img/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    /* Otras propiedades de estilo */
+}
+
+.boton{
+    background-image: transparent;
+    border: 2px solid #f0f0f0; /* Agregué un borde sólido de 2px */
+    border-radius: 20px;
+    color: #f0f0f0;
+    transition: all 0.3s ease; /* Agregué una transición suave a todos los cambios */
+    text-decoration: none; /* Quité el subrayado predeterminado */
+    padding: 8px 16px; /* Añadí un poco de relleno para que el botón tenga una mejor apariencia */
+}
+
+.boton:hover {
+    background-image: linear-gradient(to right,#FEDA77, #8134AF);
+    color: #f0f0f0;
+    opacity: 0.8;
+}
+
+.container3{
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+}
+
+.container3 h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 900;
+    position: relative;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container3 h1::after{
+    content: '';
+    background: linear-gradient(to right,#FEDA77, #8134AF);
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left:50%;
+    transform: translateX(-50%);
+    
+}
+.row1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    grid-gap: 30px;
+}
+.service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #918EF4;;
+}
+
+.service h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service:hover{
+    background: #918EF4;
+    color: #f0f0f0;
+}
+
+.service:hover i{
+    color: #f0f0f0;
+}
+
+.contact{
+    width: 100%;
+    overflow: hidden;
+    background: url("../assets/img/fondo4.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact .container{
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contact .container > div{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.left{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 65px 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-heading h1{
+    font-weight: 600;
+    color: #000;
+    font-size: 3.5rem;
+    line-height: 0.9;
+    white-space: nowrap;
+    margin-bottom: 1.2rem;
+
+}
+
+.contact-heading h1 span{
+    color: #8134AF;
+}
+
+.text{
+    font-weight: 600;
+    color: #333;
+    line-height: 1,1;
+    font-size: 1rem;
+}
+
+.text a{
+    color: #8134AF;
+    transition: 0.3s;
+}
+
+.text a:hover{
+    color: #602582;
+    transition: 0.3s;
+}
+
+.contact-form{
+
+    display: grid;
+    margin-top: 2.55rem;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.input-wrap{
+    position: relative;
+}
+
+.input-wrap.w-100{
+    grid-column: span 2;
+}
+
+.contact-input{
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    font-family: inherit;
+    border-radius: 20px;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 0px hsla(#602582);
+}
+
+.contact-input:hover{
+    background-color: #8234afad;
+}
+
+.input-wrap label{
+    position: absolute;
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: #33333392;
+    font-weight: 600;
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.input-wrap .icon{
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #33333392;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+textarea.contact-input{
+    resize: none;
+    width: 100%;
+    min-height: 150px;
+}
+
+textarea.contact-input ~ label{
+    top: 1.2rem;
+    transform: none;
+}
+
+textarea.contact-input ~ .icon{
+    top: 1.3rem;
+    transform: none;
+}
+
+.form-wrapper{
+    max-width: 32rem;
+}
+
+.input-wrap.focus .contact-input{
+    background-color: #B07BAC;
+    border: 2px solid #BF1363;
+    box-shadow: 0 0 0 5px hsla(#000);
+}
+
+.input-wrap.focus label{
+    color: #BF1363;
+}
+
+.input-wrap.focus .icon{
+    color: #BF1363;
+}
+
+.input-wrap.not-empty label{
+    font-size: .66rem;
+    top: 0.75rem;
+    transform: translateY(0);
+}
+
+.contact-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+.bstn{
+    display: inline-block;
+    padding: 1.1rem 2rem;
+    background-color: #602582;
+    color:#f0f0f0;
+    border-radius: 40px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bstn:hover{
+    background-color: #8134AF;
+}
+
+.bstn.upload{
+    position: relative;
+    background-color: #f0f0f0;
+    color: #000;
+    font-family: inherit;
+}
+
+.bstn.upload:hover{
+    background-color: #8234afad
+}
+
+.bstn.upload input {
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .coontact-heading h1{
+        font-size:  2.5rem;
+        margin-bottom: 1rem;
+        white-space: normal;
+    }
+    .text{
+        font-size: 0.9rem;
+    }
+    .contact-form{
+        display: grid;
+        margin-top: 1.9rem;
+        column-gap: 0.8rem;
+        row-gap: 0.65rem;
+    }
+
+    .contact-input{
+        border-radius: 17px;
+        font-size: 0.87rem;
+        padding: 1.5rem 1.2rem calc(0.75rem -2px) 1.2rem;
+    }
+    .input-wrap label{
+        font-size: .91rem;
+        left: calc(1.2rem + 2px);
+    }
+    .input-wrap .icon{
+        font-size: 1.1rem;
+        right: calc(1.2rem + 2px);
+    }
+    textarea.contact-input ~ label{
+        top: 1.2rem;
+    }
+    textarea.contact-input ~ .icon{
+        top: 1.33rem;
+    }
+    .input-wrap.focus .contact-input{
+        box-shadow: 0 0 0 3.5px #000 ;
+    }
+    .input-wrap.not-empty label{
+        font-size: 0.61rem;
+    }
+
+    .contact-buttons{
+        column-gap: .8rem;
+        margin-top: 0.45rem;
+
+    }
+    .bstn{
+        padding: 1rem 1.5rem;
+        font-size: 0.87rem;
+    }
+}
+
+@media (max-width: 650px){
+    .left{
+        padding: 50px 1.5rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .right{
+        display: none;
+    }
+    .form-wrapper{
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 545px){
+    .input-wrap{
+        grid-column: span 2;
+    }
+    .contact-buttons{
+        grid-template-columns: 1fr ;
+        row-gap: 0.5rem;
+    }
+    .contact-heading h1{
+        font-size: 1.9rem;
+        line-height: 1;
+    }
+
+}
+
+
+@media (max-width: 950px){
+    .container1 h1{
+        font-size: 50px;
+        font-weight: 800;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #f0f0f0;
+    }
+    .container1 p{
+        padding-top: 70px;
+        font-size: 24px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+        color: #f0f0f0;
+        text-shadow: #000;
+    }
+    #texto2{
+        margin-top: 50px;
+        font-size: 18px;
+        color: #332f2c;
+    }
+
+    #sobremi {
+        background: 
+                    url('../assets/img/fondo5celu.png');
+        background-size: cover;
+        background-position: center;
+        /* Otras propiedades de estilo */
+    }
+
+    .col h1{
+        font-size: 35px;
+        font-weight: 900;
+        color: #f0f0f0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #sobremi p {
+        text-align: left; /* Alinear el texto a la izquierda */
+        margin-top: 20px; /* Espacio superior */
+        margin-bottom: 20px; 
+        padding-top: 20px;
+        color: #f0f0f0;
+        font-weight: 600;
+        font-size: 12px;
+        max-width: 700px;
+        border: #000;
+    }
+
+    .containersob{
+        margin-top: -200px;
+    }
+}
+
+@media (max-width:376px){
+    #sobremi {
+        background: 
+                    url('../assets/img/fondo5celu.png');
+        background-size: cover;
+        background-position: center;
+        /* Otras propiedades de estilo */
+    }
+    #sobremi p {
+        text-align: left; /* Alinear el texto a la izquierda */
+        margin-top: 20px; /* Espacio superior */
+        margin-bottom: 20px; 
+        padding: 20px;
+        color: #f0f0f0;
+        font-weight: 600;
+        font-size: 10px;
+        max-width: 700px;
+        border: #000;
+    }
+    .col h1{
+        margin-top: -100px;
+        font-size: 35px;
+        font-weight: 900;
+        padding-left: 20px;
+        color: #f0f0f0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width:778px){
+    .container{
+        margin-top: -100px;
+    }
+}
+
+#msg{
+    color: #BF1363;
+    margin-top: 20px;
+    display: block;
+}
+
+.redes{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.red{
+    font-size: 30px;
+    color: #602582;
+}
+
+.red:hover{
+    background-color: #8134AF;
+    color: #ffffff;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #ffffff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright p{
+    color: #BF1363;
+}
